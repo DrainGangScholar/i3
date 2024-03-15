@@ -452,4 +452,10 @@ strip_workspace_name no
 
 bindsym $mod+d exec dmenu_run -i 
 
-exec --no-startup-id xrandr --output DP-0 --mode 1920x1080 --rate 144
+exec --no-startup-id xrandr --output DP-4 --mode 1920x1080 --rate 144 --primary --output DP-2 --mode 1920x1080 --rate 60 --right-of DP-4
+# Assign workspace "1" to DP-4
+workspace 1 output DP-4
+
+# Assign workspace "0" to DP-0
+workspace 10 output DP-2
+exec --no-startup-id redshift
